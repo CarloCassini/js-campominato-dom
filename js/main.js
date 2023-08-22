@@ -1,5 +1,6 @@
 const cellsContainer = document.getElementById("contenitore-griglia");
 const myButton = document.getElementById("genera-griglia");
+const maxBomb = 16;
 
 let score;
 let cellsTotal;

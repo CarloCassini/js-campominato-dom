@@ -24,12 +24,12 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
   - ++alla creazione delle celle++ verifico che il valore della cella sia uguale a uno dei numeri dell'array bombe. se si, la casella ha una bomba (aggiungo la classe bomba alla casella).
 - al click delle celle
   - **se** la cella non ha la classe bomba
-    - tingo di azzurro e incremento il contatore punteggio di +1
+    - tingo di azzurro e incremento il contatore punteggio di +1 (fatto)
     - **se** contatore di punteggio è pari a totale celle -16
-      - eseguo le operazioni di fine partita.
+      - eseguo le operazioni di fine partita. (fatto)
   - **altrimenti** la cella ha una bomba
     - tingo di rosso eseguo operazioni di fine partita
 
-## fine partita
+## fine partita (fatto)
 
 - mostro il punteggio raggiunto con un alert.
