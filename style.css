@@ -6,13 +6,13 @@
   width: 400px;
 }
 
-.cella-easy {
+.cella-100 {
   width: calc(100% / 10);
 }
-.cella-medium {
+.cella-81 {
   width: calc(100% / 9);
 }
-.cella-hard {
+.cella-49 {
   width: calc(100% / 7);
 }
 

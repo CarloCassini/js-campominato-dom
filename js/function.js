@@ -1,5 +1,6 @@
 function generaGriglia(numCelle, contenitoreCelle) {
   contenitoreCelle.innerHTML = " ";
+  score = 0;
   for (let i = 1; i <= numCelle; i++) {
     generaCella(contenitoreCelle, numCelle, i);
   }
@@ -10,13 +11,7 @@ function generaCella(container, difficulty, i) {
   cella.setAttribute("data-index", i);
   cella.classList.add("cella");
 
-  if (difficulty == 100) {
-    cella.classList.add("cella-easy");
-  } else if (difficulty == 81) {
-    cella.classList.add("cella-medium");
-  } else {
-    cella.classList.add("cella-hard");
-  }
+  cella.classList.add("cella-" + difficulty);
 
   cella.innerHTML = i;
 
@@ -27,5 +22,4 @@ function generaCella(container, difficulty, i) {
     console.log(cella.innerHTML);
   });
   container.append(cella);
-  console.log("test");
 }
