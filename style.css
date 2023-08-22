@@ -6,6 +6,15 @@
   width: 400px;
 }
 
+.cella {
+  border: 1px solid black;
+  aspect-ratio: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cella-100 {
   width: calc(100% / 10);
 }
@@ -15,14 +24,8 @@
 .cella-49 {
   width: calc(100% / 7);
 }
-
-.cella {
-  border: 1px solid black;
-  aspect-ratio: 1;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.cella-20 {
+  width: calc(100% / 5);
 }
 
 .cella-cliccata {
