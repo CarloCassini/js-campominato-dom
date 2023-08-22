@@ -28,6 +28,9 @@
   width: calc(100% / 5);
 }
 
-.cella-cliccata {
+.cella-salva {
   background-color: aqua;
+}
+.cella-bomba {
+  background-color: red;
 }

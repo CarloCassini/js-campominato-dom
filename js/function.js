@@ -3,8 +3,9 @@ function generaGriglia(numCelle, contenitoreCelle) {
   contenitoreCelle.innerHTML = " ";
   score = 0;
   bombList = new Array();
+
   //   genero la lista casuale di numeri con la bomba
-  bombList = randomNumberRange(1, maxBomb);
+  bombList = randomNumberRange(1, numCelle);
   console.log(" bombe " + bombList);
 
   //   costruisco le celle
@@ -15,19 +16,26 @@ function generaGriglia(numCelle, contenitoreCelle) {
 
 function generaCella(container, difficulty, i) {
   const cella = document.createElement("div");
-  cella.setAttribute("data-index", i);
   cella.classList.add("cella");
-
   cella.classList.add("cella-" + difficulty);
+
+  // aggiungo la bomba
+  if (bombList.includes(i)) {
+    cella.setAttribute("data-index", "boom");
+  }
 
   cella.innerHTML = i;
 
   cella.addEventListener("click", () => {
     // se la cella non è cliccata
-    if (!cella.classList.contains("cella-cliccata")) {
-      cella.classList.add("cella-cliccata");
+
+    if (cella.hasAttribute("data-index")) {
+      cella.classList.add("cella-bomba");
+      gameOver();
+    } else if (!cella.classList.contains("cella-salva")) {
+      cella.classList.add("cella-salva");
       // il toggle per togliere il colore
-      // cella.classList.toggle("cella-cliccata");
+      // cella.classList.toggle("cella-salva");
       console.log(cella.innerHTML);
       // incremento del punteggio
       score += 1;
