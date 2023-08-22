@@ -1,0 +1,30 @@
+#contenitore-griglia {
+  width: 500px;
+}
+#difficolta {
+  display: inline-block;
+  width: 400px;
+}
+
+.cella-easy {
+  width: calc(100% / 10);
+}
+.cella-medium {
+  width: calc(100% / 9);
+}
+.cella-hard {
+  width: calc(100% / 7);
+}
+
+.cella {
+  border: 1px solid black;
+  aspect-ratio: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cella-cliccata {
+  background-color: aqua;
+}

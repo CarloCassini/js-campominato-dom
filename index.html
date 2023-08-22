@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>griglia campominato 1</title>
+
+    <meta name="author" content="carlo cassini" />
+    <!-- inserisco collegamento a  Bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!-- inesrisco foglio di stile -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- inserisco Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- inserisco lo script js dedicato al programma -->
+    <script type="text/javascript" src="./js/function.js" defer></script>
+    <script type="text/javascript" src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>cominciamo</h1>
+
+      <button
+        type="button"
+        class="btn btn-outline-success mx-3"
+        id="genera-griglia"
+      >
+        Genera Griglia
+      </button>
+      <select class="form-select" id="difficolta">
+        <option selected value="1">easy</option>
+        <option value="2">normal</option>
+        <option value="3">hard</option>
+      </select>
+      <div class="d-flex flex-wrap my-5 mx-auto" id="contenitore-griglia"></div>
+    </div>
+  </body>
+</html>
