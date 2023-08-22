@@ -30,8 +30,13 @@ function generaCella(container, difficulty, i) {
     }
 
     if (score == cellsTotal - 16) {
-      console.log("fine del gioco");
+      gameOver();
     }
   });
+
   container.append(cella);
+}
+
+function gameOver() {
+  console.log("fine del gioco");
 }
