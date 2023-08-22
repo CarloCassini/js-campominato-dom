@@ -2,6 +2,7 @@ function generaGriglia(numCelle, contenitoreCelle) {
   // reset di inizio partita
   contenitoreCelle.innerHTML = " ";
   score = 0;
+  endFlag = false;
   bombList = new Array();
 
   //   genero la lista casuale di numeri con la bomba
@@ -27,19 +28,21 @@ function generaCella(container, difficulty, i) {
   cella.innerHTML = i;
 
   cella.addEventListener("click", () => {
-    // se la cella non è cliccata
-
-    if (cella.hasAttribute("data-index")) {
-      cella.classList.add("cella-bomba");
-      gameOver();
-    } else if (!cella.classList.contains("cella-salva")) {
-      cella.classList.add("cella-salva");
-      // il toggle per togliere il colore
-      // cella.classList.toggle("cella-salva");
-      console.log(cella.innerHTML);
-      // incremento del punteggio
-      score += 1;
-      console.log("score " + score);
+    if (!endFlag) {
+      if (cella.hasAttribute("data-index")) {
+        cella.classList.add("cella-bomba");
+        gameOver();
+      }
+      // se la cella non è cliccata
+      else if (!cella.classList.contains("cella-salva")) {
+        cella.classList.add("cella-salva");
+        // il toggle per togliere il colore
+        // cella.classList.toggle("cella-salva");
+        console.log(cella.innerHTML);
+        // incremento del punteggio
+        score += 1;
+        console.log("score " + score);
+      }
     }
 
     if (score == cellsTotal - maxBomb) {
@@ -73,6 +76,7 @@ function randomNumberRange(min, max) {
 // funzione per la fine del gioco
 function gameOver() {
   alert("fine del gioco, il tuo punteggio : " + score);
+  endFlag = true;
 }
 
 // numero random tra minimo e massimo
